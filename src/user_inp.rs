@@ -1,5 +1,4 @@
-use std::fmt::Debug;
-use std::fmt::Display;
+use std::fmt::{Debug, Display};
 use std::io;
 use std::str::FromStr;
 
@@ -19,77 +18,82 @@ where
     }
 }
 
+pub fn type_of<T>(_: &T) -> &str {
+    std::any::type_name::<T>()
+}
+
 #[cfg(test)]
 mod test {
     use super::*;
     #[test]
     fn u8_test() {
         let a: u8 = input::<u8>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "u8");
     }
     #[test]
     fn u16_test() {
         let a: u16 = input::<u16>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "u16");
     }
     #[test]
     fn u32_test() {
         let a: u32 = input::<u32>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "u32");
     }
     #[test]
     fn u128_test() {
         let a: u128 = input::<u128>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "u128");
     }
     #[test]
     fn usize_test() {
         let a: usize = input::<usize>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "usize");
     }
     #[test]
     fn i8_test() {
         let a: i8 = input::<i8>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "i8");
     }
     #[test]
     fn i16_test() {
         let a: i16 = input::<i16>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "i16");
     }
     #[test]
     fn i32_test() {
         let a: i32 = input::<i32>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "i32");
     }
     #[test]
     fn i64_test() {
         let a: i64 = input::<i64>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "i64");
     }
     #[test]
     fn i128_test() {
         let a: i128 = input::<i128>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "i128");
     }
     #[test]
     fn isize_test() {
         let a: isize = input::<isize>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "isize");
     }
     #[test]
     fn f32_test() {
         let a: f32 = input::<f32>();
         println!("{}", a);
+        assert_eq!(type_of(&a), "f32");
     }
     #[test]
     fn f64_test() {
         let a: f64 = input::<f64>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "f64");
     }
     #[test]
     fn string_test() {
         let a: String = input::<String>();
-        println!("{}", a);
+        assert_eq!(type_of(&a), "alloc::string::String");
     }
 }
