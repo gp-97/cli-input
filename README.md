@@ -10,3 +10,11 @@ __cli-input__ is an attempt in the same direction to provide pythonic syntax for
 - *integer* : `i8`, `i16`, `i32`, `i64`, `i128`, `isize`
 - *float* : `f32`, `f64`
 - *String*: `String` ([std::string::String](https://doc.rust-lang.org/std/string/struct.String.html))
+
+### Examples:
+```sh
+    let var: usize = input::<usize>();
+    let var: i32 = input::<i32>();
+    let var: f32 = input::<f32>();
+    let var: String = input::<String>();
+```
