@@ -12,6 +12,7 @@ __cli-input__ is an attempt in the same direction to provide pythonic syntax for
 - *String*: `String` ([std::string::String](https://doc.rust-lang.org/std/string/struct.String.html))
 
 ### Examples:
+> Note: first import the `user_inp.rs` module in your file
 ```sh
     let var: usize = input::<usize>();
     let var: i32 = input::<i32>();
