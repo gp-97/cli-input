@@ -9,7 +9,7 @@ __term__ is an attempt in the same direction to provide pythonic syntax for user
 - *unsigned* : `u8`, `u16`, `u32`, `u64`, `u128`, `usize`
 - *integer* : `i8`, `i16`, `i32`, `i64`, `i128`, `isize`
 - *float* : `f32`, `f64`
-- *String*: `String` ([std::string::String](https://doc.rust-lang.org/std/string/struct.String.html))
+- *String*: `String` ([std::string::String](https://doc.rust-lang.org/std/string/struct.String.html)), `&str` (Via Workaround)
 > Note: *&str* works via a workaround as mentioned in __Examples__ section.
 
 ### Examples:
