@@ -13,8 +13,9 @@ __term__ is an attempt in the same direction to provide pythonic syntax for user
 > Note: *&str* works via a workaround as mentioned in __Examples__ section.
 
 ### Examples:
-> Note: first import the `user_inp.rs` module in your file
 ```sh
+    use term::input;
+
     let var: usize = input::<usize>();
     let var: i32 = input::<i32>();
     let var: f32 = input::<f32>();
@@ -22,6 +23,8 @@ __term__ is an attempt in the same direction to provide pythonic syntax for user
 ```
 In case `&str` is required:
 ```sh
+    use term::input;
+
     let var = input::<String>();
     let var = var.as_str();
 ```
